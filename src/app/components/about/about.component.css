@@ -1,0 +1,70 @@
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background: #000; /* خلفية سوداء */
+  color: #fff; /* نص أبيض */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card .icon {
+  font-size: 60px;
+  color: #e74c3c; /* لون الأيقونة */
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .icon {
+  color: #1abc9c; /* لون الأيقونة عند التحويم */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* لون النص */
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #ccc; /* لون النص الفاتح */
+  line-height: 1.6;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.row .col-lg-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}

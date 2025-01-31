@@ -1,0 +1,182 @@
+/* تخصيص أول حرفين */
+.large-text {
+    color: white; /* اللون الأبيض */
+  }
+  
+  /* تخصيص باقي النص */
+  .normal-text {
+    color: rgb(212, 19, 19); /* اللون الأحمر */
+  }
+  
+
+  .creative-products-section {
+    padding: 50px 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align:left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    text-align:left;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .products-grid {
+    display: flex;
+    justify-content: center; /* تأكد من أن الكاردات في المنتصف */
+    align-items: center;
+    animation: moveProducts 20s linear infinite; /* حركة الكاردات */
+    gap: 20px; /* زيادة المسافة بين الكاردات */
+  }
+  
+  .product-item {
+    flex: 0 0 300px; /* عرض ثابت لكل كارد */
+    height: 400px; /* تحديد ارتفاع ثابت لكل كارد */
+    flex-direction: column; /* ترتيب العناصر داخل الكارد عمودياً */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* إضافة تأثير المؤشر عند التمرير */
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-content {
+    padding: 20px;
+    justify-content: space-between; /* لضمان توزيع المحتوى بشكل متوازن */
+  
+  }
+  
+  .product-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold; /* جعل العنوان عريض */
+  
+  }
+  
+  .product-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .btn-view {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-view:hover {
+    background-color: #0056b3;
+  }
+  
+  @keyframes moveProducts {
+    0% {
+      transform: translateX(0); /* البداية */
+    }
+    100% {
+      transform: translateX(-100%); /* التمرير الكامل للكاردات */
+    }
+  }
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold; /* جعل السعر عريض */
+    color: #333;
+    margin-top: 10px;
+  }
+/* Slider Container */
+.slider-container {
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
+  position: relative;
+  max-width: 600px; /* Adjust container width */
+  margin: 0 auto; /* Center the slider */
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  width: 400%; /* 4 slides = 400% */
+  animation: slide 16s infinite; /* Total animation duration */
+}
+
+/* Individual Slide */
+.slide {
+  flex: 0 0 25%; /* Each slide takes 25% of the container */
+  box-sizing: border-box;
+  opacity: 0; /* Hide all slides initially */
+  animation: fade 16s infinite; /* Apply fade animation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Images inside slides */
+.slide img {
+  max-width: 80%; /* Reduce image size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at the first slide */
+  }
+  25% {
+    transform: translateX(0); /* Show first slide */
+  }
+  50% {
+    transform: translateX(-25%); /* Move to second slide */
+  }
+  75% {
+    transform: translateX(-50%); /* Move to third slide */
+  }
+  100% {
+    transform: translateX(-75%); /* Move to fourth slide */
+  }
+}
+
+/* Keyframes for fade animation */
+@keyframes fade {
+  0%{
+    opacity: 0; /* Hide all slides at start and end */
+
+  }
+   100% {
+    opacity: 1; /* Hide all slides at start and end */
+  }
+  10%, 90% {
+    opacity: 1; /* Show current slide */
+  }
+}
+
+
+
+
+
+  

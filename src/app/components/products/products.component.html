@@ -1,0 +1,25 @@
+<div class="creative-products-section">
+  <div class="container">
+    <div class="products-grid">
+      <div *ngFor="let product of products" class="product-item">
+        <!-- رابط المنتج -->
+        <a [routerLink]="['/product-details', product.id]">
+          <!-- صورة المنتج -->
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.title" class="img-fluid">
+          </div>
+          <!-- محتوى المنتج -->
+          <div class="product-content">
+            <h3> {{ product.title }}</h3>
+            <p>{{ product.description }}</p>
+            <p><strong>Price:</strong> {{ product.price | currency:'EUR':'symbol':'1.2-2' }}</p>    
+          </div>
+        </a>
+        <!-- زر إضافة إلى السلة -->
+        <button (click)="addToCart(product)" class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

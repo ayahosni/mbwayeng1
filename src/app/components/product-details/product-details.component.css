@@ -1,0 +1,40 @@
+/* تنسيقات معرض الصور */
+.image-gallery {
+    width: 90%; /* زيادة عرض الحاوية */
+    margin: 20px auto; /* توسيط الحاوية */  }
+  
+  .main-image img {
+    width: 60%; 
+    height: auto; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover; 
+  }
+  
+  .thumbnail-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+  
+  .thumbnail img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .thumbnail:hover {
+    border-color: #007bff;
+  }
+  
+  .thumbnail.active {
+    border-color: #007bff;
+  }

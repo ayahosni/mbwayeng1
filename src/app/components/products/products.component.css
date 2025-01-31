@@ -1,0 +1,138 @@
+/* القسم العام */
+.creative-products-section {
+  padding: 80px 0;
+  background: black; /* الخلفية سوداء */
+  font-family: 'Roboto', sans-serif;
+  color: white; /* النص الأبيض */
+}
+
+/* حاوية المنتجات */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 100px;
+}
+
+/* شبكة المنتجات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* عنصر المنتج */
+.product-item {
+  background: #1c1c1c; /* خلفية رمادية داكنة */
+  border: 1px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* تأثير التحويم */
+.product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4); /* ظل أحمر */
+}
+
+/* صورة المنتج */
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #444;
+}
+
+/* محتوى المنتج */
+.product-content {
+  padding: 20px;
+  text-align: center;
+  color: white; /* النص أبيض */
+}
+
+/* عنوان المنتج */
+.product-content h3 {
+  font-size: 1.4em;
+  color: white; /* النص أبيض */
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-content h3 i {
+  color: #580202; /* أيقونة حمراء */
+}
+
+/* وصف المنتج */
+.product-content p {
+  font-size: 0.9em;
+  color: #ccc; /* نص رمادي فاتح */
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* سعر المنتج */
+.product-price {
+  font-size: 1.3em;
+  color: #580202; /* السعر بالأحمر */
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* زر إضافة إلى السلة */
+.add-to-cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  background: #580202; /* الزر أحمر */
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn i {
+  font-size: 1.2em;
+}
+
+/* تأثير التحويم */
+.add-to-cart-btn:hover {
+  background: #cc0000; /* لون أحمر أغمق عند التحويم */
+  transform: translateY(-3px);
+}
+
+/* تأثير النقر */
+.add-to-cart-btn:active {
+  transform: scale(0.97);
+}
+
+/* الرسوم المتحركة */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-item {
+  animation: fadeIn 0.5s ease forwards;
+}

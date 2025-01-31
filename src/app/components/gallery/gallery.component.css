@@ -1,0 +1,79 @@
+/* General Styles */
+.gallery-section {
+    padding: 40px 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-heading-wrap {
+    margin-bottom: 40px;
+  }
+  
+  .heading-h2 {
+    font-size: 2.5rem;
+    color: #f4f4f4;
+    text-align: center;
+  }
+  
+  /* Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Gallery Item */
+  .gallery-item {
+    perspective: 1000px; /* For 3D effect */
+  }
+  
+  .gallery-item-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  
+  .gallery-item:hover .gallery-item-inner {
+    transform: rotateY(180deg); /* Flip effect on hover */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    backface-visibility: hidden; /* Hide back side during flip */
+  }
+  
+  /* Product Info */
+  .product-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    backface-visibility: hidden; /* Hide back side during flip */
+    transform: rotateY(180deg); /* Start flipped */
+  }
+  
+  .product-name {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    margin: 0;
+  }
