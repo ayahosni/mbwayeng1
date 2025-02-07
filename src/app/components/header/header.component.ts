@@ -1,18 +1,19 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterModule } from '@angular/router'; 
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  imports:[RouterModule],
+  imports:[RouterModule,CommonModule],
 
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
-  isMobileMenuOpen = false;
+  menuOpen = false;
 
-  toggleMobileMenu() {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
-}
+  }

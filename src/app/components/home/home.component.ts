@@ -6,10 +6,12 @@ import * as AOS from 'aos';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router'; // استيراد RouterModule
 import{AboutComponent} from '../about/about.component';
+import{ContactComponent} from '../contact/contact.component';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports:[CommonModule,RouterModule,AboutComponent], // إضافة RouterModule هنا
+  imports:[CommonModule,RouterModule,AboutComponent,ContactComponent], // إضافة RouterModule هنا
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

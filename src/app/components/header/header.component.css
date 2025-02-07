@@ -1,0 +1,119 @@
+/* تنسيق اللوجو */
+.site-logo {
+    position: absolute;
+    left: 10px; /* بدلاً من المنتصف لمنع التداخل */
+    top: 10px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.logo-img {
+    width: 100px; 
+    height: auto;
+    max-width: 100%;
+}
+
+/* تصميم القائمة المنسدلة للموبايل */
+.site-nav-mobile {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background:#000;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    width: 220px;
+    z-index: 1000;
+}
+
+/* ضبط أبعاد عناصر القائمة */
+.site-nav-mobile li {
+    padding: 12px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+.site-nav-mobile li:last-child {
+    border-bottom: none;
+}
+
+/* زر القائمة على الموبايل */
+.navbar-toggler {
+    font-size: 24px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1001;
+}
+
+/* ضبط القائمة الرئيسية */
+.site-nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* إخفاء القائمة المنسدلة على الشاشات الكبيرة */
+@media (min-width: 992px) {
+    .site-nav-mobile {
+        display: none !important;
+    }
+}
+
+/* تحسين توزيع العناصر على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .site-logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-toggler {
+        right: 15px;
+        top: 10px;
+    }
+
+    .site-nav-mobile {
+        right: 50%;
+        transform: translateX(50%);
+        width: 250px;
+    }
+}
+/* اللوجو الأساسي */
+.site-logo {
+    position: absolute;
+    left: 10px; /* الوضع الافتراضي */
+    top: 10px;
+}
+
+/* صورة اللوجو */
+.logo-img {
+    width: 150px; /* الحجم الافتراضي */
+    height: auto;
+    max-width: 70%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* توسيط اللوجو للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .site-logo {
+        left: 50%;
+        transform: translateX(-50%); /* توسيط اللوجو تمامًا */
+        top: 5px;
+        margin-left:10px;
+    }
+
+    .logo-img {
+        width: 80px; /* تصغير اللوجو */
+    }
+}
+
+/* تحسين اللوجو للهواتف الصغيرة جدًا */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 50px; /* حجم أصغر ليكون مناسبًا */
+    }
+}
