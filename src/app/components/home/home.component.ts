@@ -5,8 +5,8 @@ import 'owl.carousel';
 import * as AOS from 'aos';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router'; // استيراد RouterModule
-import{AboutComponent} from '../about/about.component';
-import{ContactComponent} from '../contact/contact.component';
+import { AboutComponent } from '../about/about.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-home',
